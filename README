@@ -1,0 +1,22 @@
+== Tema 2 - PA - Razvan Radoi - 321CA ==
+
+Ex1
+	Am facut o parcurgere normala BFS. Pentru fiecare nod, ma uitam la vecini,
+	ii bagam intr-un vector, sortam vectorul, apoi vectorul sortat il bagam
+	in coada. Asa rezulta min lex bfs.
+
+Ex2
+	Am determinat muchiile critice si le-am eliminat din graf. Pe graful fara
+	muchii critice, am determinat componentele conexe. In acele componente
+	conexe, am numarat cate noduri sunt "afectate". Apoi am facut suma.
+
+Ex3
+	Aici am folosit o euristica, adica cuvantul frumos si academic pentru 
+	bulangeala. Am aflat dupa ca se putea si mult mai usor, but if it ain't
+	broke, don't fix it. Anyway:
+	- muchiilor "opuse" celor citite le atribui o valoare a unui numar prim
+	foarte mare. Este prim ca sa ma asigur ca % nu da rezultate aiurea si e
+	foarte mare ca prin adaugarea de "1" de la muchii normale sa nu apara
+	overflow pe rez + 1. Rezultatul final, este practic raspuns * numarPrimMare + k,
+	unde k << numarPrimMare, k = nr de muchii normale folosite.
+	Hope it makes sense.
